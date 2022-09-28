@@ -1,3 +1,4 @@
+import { coerceNumberProperty } from '@angular/cdk/coercion';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events-list.component.scss']
 })
 export class EventsListComponent implements OnInit {
-  event = {
+  event1 = {
     id: 1,
     name: 'Angular Connect',
     date: '9/26/2036',
@@ -22,5 +23,7 @@ export class EventsListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  handleEventClicked(data: any): void {
+    console.log(data);
+  }
 }

@@ -1,1 +1,14 @@
-<p>event-thumbnail works!</p>
+<div class="events">
+    <br>
+    <br>
+    <h2>Name of the event {{event.name}}</h2>
+    <div>Date : {{event.date}}</div>
+    <div>Time : {{event.time}}</div>
+    <div>Price : {{event.price}}</div>
+    <div>
+        <span>Location: {{event.location.address}}</span>
+        <span>&nbsp;</span>
+        <span>{{event.location.city}} , {{event.location.country}}</span>
+    </div>
+    <button (click)="handleClickMe()">Click me</button>
+</div>
