@@ -9,9 +9,11 @@ import { MatListModule } from '@angular/material/list';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { FileuploadComponent } from './components/fileupload/fileupload.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FileuploadComponent
   ],
   imports: [
     
