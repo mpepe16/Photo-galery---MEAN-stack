@@ -15,6 +15,7 @@ import { EventsListComponent } from './events/events-list/events-list.component'
 import { EventsAppComponent } from './events-app/events-app.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,

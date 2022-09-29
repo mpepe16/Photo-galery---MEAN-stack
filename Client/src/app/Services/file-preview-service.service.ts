@@ -17,7 +17,7 @@ export interface IPictureModel {
   Tags!: string;
  }
  
-export class FilePreviewServiceService {
+export class FilePreviewService {
 
   // Since dealing with images can take a long time, we setup an async function
   // And we expect to get back a promise. To be precise, we expect to get IPictureModel promise.
@@ -39,11 +39,10 @@ export class FilePreviewServiceService {
        imageModel.Name = file.name;
        const reader = new FileReader();
 
-       reader.onload = (evt) => {
-
-        // In order to set our imageModel.Image property to the reader result, we need to chage
+       // In order to set our imageModel.Image property to the reader result, we need to chage
         // The interface Image property to handle null or ArrayBuffer.
 
+       reader.onload = (evt) => {
         imageModel.Image = reader.result;
         resolve(imageModel);
        };

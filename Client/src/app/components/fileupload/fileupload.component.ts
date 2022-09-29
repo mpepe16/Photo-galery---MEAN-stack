@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IPictureModel } from 'src/app/Services/file-preview-service.service';
-
+import { FilePreviewService, IPictureModel } from 'src/app/Services/file-preview-service.service';
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'atp-fileupload',
   templateUrl: './fileupload.component.html',
@@ -14,7 +14,10 @@ export class FileuploadComponent implements OnInit {
   protected tags!: string;
 
 
-  constructor() { }
+  constructor(
+    private dialog: MatDialogRef<FileuploadComponent>,
+    private preview: FilePreviewService) 
+    { }
 
   ngOnInit(): void {
   }
