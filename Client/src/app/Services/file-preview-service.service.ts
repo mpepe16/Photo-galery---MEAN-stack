@@ -1,21 +1,11 @@
 
 import { Injectable } from '@angular/core';
-
-@Injectable({
+import { IPictureModel, PictureModel } from '../types';
+@Injectable
+({
   providedIn: 'root'
 })
-export interface IPictureModel {
-  Image: string | null | ArrayBuffer;
-  Name: string;
-  Description: string;
-  Tags: string;
- }
- export class PictureModel implements IPictureModel {
-  Image!: string ;
-  Name!: string;
-  Description!: string;
-  Tags!: string;
- }
+
  
 export class FilePreviewService {
 

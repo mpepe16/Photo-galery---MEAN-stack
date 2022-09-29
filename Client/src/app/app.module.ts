@@ -7,6 +7,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
@@ -15,6 +17,7 @@ import { EventsListComponent } from './events/events-list/events-list.component'
 import { EventsAppComponent } from './events-app/events-app.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
+import { FormsModule } from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -36,9 +39,15 @@ import { NavbarComponent } from './nav/navbar/navbar.component';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    CommonModule
+    MatInputModule,
+    MatDialogModule,
+    CommonModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: MatDialogRef,
+    useValue: {}
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

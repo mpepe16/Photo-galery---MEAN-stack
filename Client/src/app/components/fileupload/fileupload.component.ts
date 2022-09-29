@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FilePreviewService, IPictureModel } from 'src/app/Services/file-preview-service.service';
-import { MatDialogRef } from '@angular/material/dialog';
+import { FilePreviewService } from 'src/app/Services/file-preview-service.service';
+import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { FormGroup } from '@angular/forms';
+import { IPictureModel, PictureModel } from 'src/app/types';
+
 @Component({
   selector: 'atp-fileupload',
   templateUrl: './fileupload.component.html',
