@@ -1,8 +1,10 @@
-<div class="events">
+<div >
     <h3>List of events:</h3>
     <hr>
-    <atp-event-thumbnail #thumbnail  [event] = "event1"></atp-event-thumbnail>  
-    <button (click) ="thumbnail.logFoo()">Log me some foo</button> 
-    <br>
-    <span>{{thumbnail.testProperty}}</span> 
+    <mat-grid-list cols="2" rowHeight="300">
+        <mat-grid-tile class="tile" *ngFor="let event of events">
+            <atp-event-thumbnail #thumbnail   [event]="event">
+            </atp-event-thumbnail>
+        </mat-grid-tile>
+    </mat-grid-list>    
 </div>

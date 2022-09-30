@@ -18,6 +18,7 @@ import { EventsAppComponent } from './events-app/events-app.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { FormsModule } from "@angular/forms"
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormsModule } from "@angular/forms"
     MatTableModule,
     MatInputModule,
     MatDialogModule,
+    MatGridListModule,
     CommonModule,
     FormsModule
   ],
