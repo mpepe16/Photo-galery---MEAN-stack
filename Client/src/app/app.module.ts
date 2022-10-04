@@ -19,6 +19,7 @@ import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnai
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { FormsModule } from "@angular/forms"
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ColonyComponent } from './antColony/colony/colony.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     EventsListComponent,
     EventsAppComponent,
     EventThumbnailComponent,
-    NavbarComponent
+    NavbarComponent,
+    ColonyComponent
   ],
   imports: [
     
