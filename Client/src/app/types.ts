@@ -1,7 +1,7 @@
 export type ImageType = string | ArrayBuffer;
 
 export interface IPictureModel {
-    Image: string | null | ArrayBuffer;
+    Image: ImageType;
     Name: string;
     Description: string;
     Tags: string;

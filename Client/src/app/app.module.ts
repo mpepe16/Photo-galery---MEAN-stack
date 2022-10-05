@@ -52,6 +52,9 @@ import { ColonyComponent } from './antColony/colony/colony.component';
     provide: MatDialogRef,
     useValue: {}
   }],
+  entryComponents: [
+    FileuploadComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
