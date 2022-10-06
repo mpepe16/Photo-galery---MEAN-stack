@@ -16,10 +16,7 @@ export class Mongo {
          console.log(`Unable to connect ` + e);
          } else {
          console.log(`Connected to the database`);
-         }
-         });
-         }
-        
+         }});}
 }
 
 // A simple database shcema for our picture.
