@@ -20,6 +20,7 @@ import { NavbarComponent } from './nav/navbar/navbar.component';
 import { FormsModule } from "@angular/forms"
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ColonyComponent } from './antColony/colony/colony.component';
+import { PageBodyComponent } from './components/page-body/page-body.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ColonyComponent } from './antColony/colony/colony.component';
     EventsAppComponent,
     EventThumbnailComponent,
     NavbarComponent,
-    ColonyComponent
+    ColonyComponent,
+    PageBodyComponent
   ],
   imports: [
     
