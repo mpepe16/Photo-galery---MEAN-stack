@@ -1,0 +1,12 @@
+<div>
+    <h1>Welcome to the ant colony ! </h1>
+    <label for="width">Colony width: </label>
+    <input id="width" type ="text"  placeholder="width" #width>
+    <label for="heigth">Colony heigth: </label>
+    <input id="heigth" type = "text"  placeholder="heigth" #heigth>
+    <button type = "button" (click) = "buildColony(heigth.value, width.value)"> 
+        Create colony</button>
+</div>
+<div #container id="container">
+    
+</div>

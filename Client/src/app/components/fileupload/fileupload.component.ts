@@ -11,10 +11,10 @@ import { IPictureModel, PictureModel } from 'src/app/types';
 })
 export class FileuploadComponent implements OnInit {
 
-  protected imageSource!: IPictureModel ;
+  protected imageSource!: IPictureModel | null;
   protected message: any;
   protected description!: string;
-  protected tags!: string;
+  protected tags!: string ;
 
   // Angular provide us a common dependency injection through the constructor
   // where we basically just name "what" we would like inject and the "how"

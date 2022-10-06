@@ -18,6 +18,8 @@ import { EventsAppComponent } from './events-app/events-app.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { FormsModule } from "@angular/forms"
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ColonyComponent } from './antColony/colony/colony.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { FormsModule } from "@angular/forms"
     EventsListComponent,
     EventsAppComponent,
     EventThumbnailComponent,
-    NavbarComponent
+    NavbarComponent,
+    ColonyComponent
   ],
   imports: [
     
@@ -41,6 +44,7 @@ import { FormsModule } from "@angular/forms"
     MatTableModule,
     MatInputModule,
     MatDialogModule,
+    MatGridListModule,
     CommonModule,
     FormsModule
   ],
@@ -48,6 +52,9 @@ import { FormsModule } from "@angular/forms"
     provide: MatDialogRef,
     useValue: {}
   }],
+  entryComponents: [
+    FileuploadComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
