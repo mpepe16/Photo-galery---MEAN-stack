@@ -1,13 +1,18 @@
-import * as express from "express";
-import * as bodyParser from "body-parser";
-import * as cors from "cors";
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
 import { Mongo } from "./Database";
 import { RoutingEngine } from "./Routing/RoutingEngine";
-export class Server {
+export abstract class Server {
+    private router: any;
+
     constructor(private port : number = 3000, private app : any = express(), 
     private mongo: Mongo = new Mongo(), private routingEngine: RoutingEngine = new RoutingEngine()) {
     
      }
+
+     protected abstract AddRouting(routingEngine: RoutingEngine, router: any) : void;
+
      public start(): void{
         this.OnStart();
         // With the express use method we can set our middleware accordingly
@@ -19,6 +24,15 @@ export class Server {
         // This method is identical to Node’s http.Server.listen() method.
         this.app.listen(this.port, () => 
         console.log(`Express server running on port ${this.port}`));
+
+        this.mongo.Connect();
+        this.router = express.Router();
+        this.AddRouting(this.routingEngine, this.router);
+        this.app.use(this.router);
+        this.OnStart();
+        this.app.listen(this.port, () => console.log(`Express server running on
+       port ${this.port}`));
+
         }
         // The OnStart method is responsible for sending a message whenever we receive a get request
 
