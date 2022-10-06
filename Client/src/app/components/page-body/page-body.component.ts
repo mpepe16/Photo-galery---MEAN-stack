@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IPictureModel } from 'src/app/types';
 
 @Component({
   selector: 'atp-page-body',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-body.component.scss']
 })
 export class PageBodyComponent implements OnInit {
-
-  constructor() { }
+  Pictures: Array<IPictureModel>; 
+  constructor(private addImage: AddImageService, private loadImage: LoadImageService,
+     private transfer: TransferDataService) {
+     this.Pictures = new Array<IPictureModel>();
+     }
+    
 
   ngOnInit(): void {
   }
