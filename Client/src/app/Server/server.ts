@@ -1,9 +1,12 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
+import { Mongo } from "./Database";
+import { RoutingEngine } from "./Routing/RoutingEngine";
 export class Server {
-    constructor(private port : number = 3000, private app : any = express())
-    {
+    constructor(private port : number = 3000, private app : any = express(), 
+    private mongo: Mongo = new Mongo(), private routingEngine: RoutingEngine = new RoutingEngine()) {
+    
      }
      public start(): void{
         this.OnStart();
